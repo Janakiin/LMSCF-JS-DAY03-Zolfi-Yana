@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+   <title>Basic 1</title>
+
+</head>
+
+<body>
+
+ 
+
+   <script type="text/javascript">
+
+   	arr=[];
+   	mm=prompt("Add the length of numbers:");
+m=parseInt(mm);
+m++;
+   	for(i=0; i< m ; i++){
+   		str=prompt("enter the value");
+   		arr[i]=parseInt(str);
+   	}
+
+   	for(i=0; i< arr.length; i++){
+   		for(j=i+1;j<arr.length; j++){
+   			if (arr[j]>arr[i]){
+   				a=arr[i];
+   				arr[i]=arr[j];
+   				arr[j]=a;
+   			}
+   		}
+   		
+   	}
+   	for(c=0;c<arr.length;c++){
+   		document.write(arr[c]);
+   	}
+
+
+   </script>
+
+</body>
+
+</html>
