@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic1</title>
+</head>
+<body>
+	<script>
+		var tem = 0;
+		
+		function temperature(tem) {
+			//randomly generating the temperature
+			tem = (Math.random() *30) -5;
+			document.write(tem);
+			document.write("<br>");
+
+			//conditions and output
+			if (tem > -5 && tem <10 ) {
+				document.write( "The weather is cold" );
+			} else {
+				document.write("The weather is moderate");
+			}
+		}
+
+		temperature()
+
+
+	</script>
+</body>
+</html>
