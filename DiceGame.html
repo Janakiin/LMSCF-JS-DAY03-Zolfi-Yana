@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dice Game</title>
+	<link rel="stylesheet" type="text/css" href="DiceGame.css">
+</head>
+<body>
+	<center>
+	<header>
+		<h1 class="h1">Try it!</h1>
+		<h1 id="players"></h1>
+	</header>
+		<div class="flex">
+			<div class="player">
+				<p id="name1"></p>
+				<button id="fun1button" onclick="fun1()">Roll</button>
+			</div>
+			<div class="player">
+				<p id="name2"></p>
+				<button id="fun2button" onclick="fun2()">Roll</button>
+			</div>
+		</div>
+	
+
+	<div class="winner">
+		<p id="winner"></p>
+		<button id="subw" onclick="compare()">Know the winner</button>
+	</div>
+	</center>
+
+
+	<script>
+
+//get the names
+
+		var player1="";
+		var player2="";
+		
+		function gf() {
+			player1 = prompt("The first player. Your name, please");
+			player2 = prompt("The second player. Your name, please");
+			pp = player1 + " vs " + player2 
+			return pp
+		}
+
+//display the names
+		
+		p=gf();
+		document.getElementById("players").innerHTML = p;
+		var sum = 0;
+		var sum1 = 0;
+		var sum2 = 0;
+
+		document.getElementById("subw").disabled = true;
+
+// function for Player`s 1 Roll
+
+		function fun1(){
+
+			var a = Math.ceil(Math.random() * 6);
+			var b = Math.ceil(Math.random() * 6);
+			var c = Math.ceil(Math.random() * 6);
+			sum1 = a + b + c;
+			num= "The numbers are: " + a + ", " + b + ", "+ c + ". <br> The sum is: " + sum1;
+			document.getElementById("name1").innerHTML = num;
+			document.getElementById("fun1button").disabled = true;
+			sum1 = sum1;	
+			return sum1;
+		}
+		
+//function for Player`s 2 roll`		
+
+		function fun2(){
+			
+
+			var a = Math.ceil(Math.random() * 6);
+			var b = Math.ceil(Math.random() * 6);
+			var c = Math.ceil(Math.random() * 6);
+			sum2 = a + b + c;
+			num= "The numbers are: " + a + ", " + b + ", "+ c + ". <br> The sum is: " + sum2;
+			document.getElementById("name2").innerHTML = num;
+			document.getElementById("fun2button").disabled = true;
+			document.getElementById("subw").disabled = false;
+			sum2 = sum2;
+			return sum2;
+		}
+
+//comparison function 
+
+		function compare(){
+
+
+			if (sum1 > sum2) {
+				document.getElementById("winner").innerHTML = player1 + " wins!";
+			} else if (sum1 < sum2) {
+				document.getElementById("winner").innerHTML = player2 + " wins!";
+			} else {
+				document.getElementById("winner").innerHTML = "Tie!";
+			}
+			document.getElementById("fun1button").disabled = false;
+
+		}
+
+		
+
+
+		
+	</script>
+</body>
+</html>

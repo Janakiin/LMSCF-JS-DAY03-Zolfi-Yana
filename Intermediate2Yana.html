@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+
+		//creating an array from 1 to 100
+
+		var arr = [1];
+
+		(function arrCreator() {
+			var numbers = 1;
+
+			for (i = 1; i < 100; i++) {
+				numbers++
+				arr.push(numbers);
+			}
+		})()
+
+		console.log(arr)
+
+		//starting to sort the values
+		
+		function FizzBuzz(arr) {
+			for (var i = 0; i < arr.length; i++) {
+				if (arr[i] % 3) {
+					arr[i] = "Buzz";
+					
+					 if (arr[i] % 5) {
+						arr[i] = "FizzBuzz"; 
+					}
+				} else if (arr[i] % 5) {
+					arr[i] = "Fizz";
+				}
+			}
+		}
+
+		FizzBuzz(arr);
+		console.log(arr)
+
+
+		
+		//FizzBuzz();
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UT-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		var Martin = 76;
+		var Thomas = 85;
+		var Klaus = 65;
+		var Maria = 93;
+		var David = 81;
+
+		// average mark
+
+		average = (Martin + Thomas + Klaus + Maria + David)/5;
+		console.log(average)
+
+
+		function Dumbledore(average) {
+			if (average > 60) {
+				document.write( "The average grade is F");}
+				
+					else if (average > 60 && average < 70){ 
+					document.write( "The average grade is D");}
+					else if (average > 70 && average < 80) {
+						document.write( "The average grade is C");} 
+						else if (average > 80 && average < 90) {
+							document.write( "The average grade is B");}
+						else if (average > 90 && average < 100) { 
+							document.write( "The average grade is A");
+
+						}
+					}
+			
+			
+Dumbledore(average);
+			
+
+	</script>
+</body>
+</html>
